@@ -9,7 +9,9 @@ FROM ubuntu:14.04
 FROM node:0.12.7
 ENV container docker
 
+RUN apt-get update
 RUN apt-get -y install build-essential
+RUN apt-get -y install unzip
 
 # Install Ghost
 RUN \
