@@ -5,7 +5,11 @@
 #
 
 # Pull base image.
-FROM dockerfile/nodejs
+FROM ubuntu:14.04
+FROM node:0.12.7
+ENV container docker
+
+RUN apt-get -y install build-essential
 
 # Install Ghost
 RUN \
